@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Botão do cupom */
+/* Fundo escuro (backdrop) */
+.modal.show {
+  display: flex;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* fundo escuro */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal em si */
+.modal-dialog {
+  background-color: #263238;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  color: #ECEFF1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* Cabeçalho */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #B0BEC5;
+}
+
+.modal-title {
+  color: #FF6F00;
+  margin: 0;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: #ECEFF1;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Corpo */
+.modal-body input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #B0BEC5;
+  background-color: #37474F;
+  color: #ECEFF1;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: #B0BEC5;
+}
+
+/* Botões */
+.btn-cupom, .btn-enviar {
+  background-color: #FF6F00;
+  color: #ECEFF1;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cupom:hover, .btn-enviar:hover {
+  background-color: #e65c00;
+}
+
+.btn-fechar {
+  background-color: transparent;
+  border: none;
+  color: #ECEFF1;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Botão do Cupom -->
+<!-- Botão -->
+<button type="button" class="btn-cupom" data-bs-toggle="modal" data-bs-target="#cupomModal">
+  Resgatar Cupom de 40%
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="cupomModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Resgate seu Cupom!</h5>
+        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Ganhe <strong>40% de bônus</strong> nos nossos serviços. Preencha os dados abaixo para gerar seu cupom:</p>
+        <form>
+          <input type="text" placeholder="Seu nome" required><br><br>
+          <input type="email" placeholder="Seu e-mail" required><br><br>
+          <input type="tel" placeholder="Seu telefone"><br><br>
+          <button type="submit" class="btn-enviar">Gerar Cupom</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-fechar" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
